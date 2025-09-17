@@ -192,6 +192,7 @@ const PREFERS_REDUCE = window.matchMedia("(prefers-reduced-motion: reduce)").mat
 })();
 
 /* ------------------ SPARKLES (pointer + scroll) ------------------ */
+/* ------------------ SPARKLES (pointer + scroll) ------------------ */
 (function initSparkles() {
   const canvas = document.getElementById('sparkles');
   const hero = document.querySelector('.hero');
@@ -206,6 +207,10 @@ const PREFERS_REDUCE = window.matchMedia("(prefers-reduced-motion: reduce)").mat
   let particles = [];
   let lastMove = 0;
   const MOVE_THROTTLE = 40; // ms
+
+  // 🎨 Yellow sparkle colors (from your earlier patch)
+  const SPARKLE_CENTER = '255, 244, 79';  // bright yellow
+  const SPARKLE_MID    = '255, 196, 0';   // warm golden halo
 
   function resizeCanvas() {
     const rect = hero.getBoundingClientRect();
@@ -251,10 +256,11 @@ const PREFERS_REDUCE = window.matchMedia("(prefers-reduced-motion: reduce)").mat
         continue;
       }
 
+      // ✨ Yellow gradient
       const grad = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r * 5);
-      grad.addColorStop(0, `rgba(255,255,255,${p.life})`);
-      grad.addColorStop(0.4, `rgba(20,184,166,${p.life * 0.6})`);
-      grad.addColorStop(1, 'rgba(0,0,0,0)');
+      grad.addColorStop(0, `rgba(${SPARKLE_CENTER}, ${p.life})`);         // bright yellow center
+      grad.addColorStop(0.4, `rgba(${SPARKLE_MID}, ${p.life * 0.6})`);    // golden halo
+      grad.addColorStop(1, 'rgba(0,0,0,0)');                              // fade out
       ctx.fillStyle = grad;
       ctx.beginPath();
       ctx.arc(p.x, p.y, p.r * 2, 0, Math.PI * 2);
@@ -284,12 +290,8 @@ const PREFERS_REDUCE = window.matchMedia("(prefers-reduced-motion: reduce)").mat
     }
   }
 
-  function onScroll() {
-    const speed = Math.min(Math.abs(window.scrollY - (onScroll._last || 0)), 120);
-    onScroll._last = window.scrollY;
-    const clusters = 1 + Math.round((speed / 120) * 6);
-    for (let i = 0; i < clusters; i++) spawnRandom(1);
-  }
+  // NOTE: We intentionally REMOVE the scroll-based spawner to prevent sparks when scrolling.
+  // The original onScroll() that spawned clusters based on scroll speed has been omitted.
 
   window.addEventListener('resize', resizeCanvas);
   resizeCanvas();
@@ -297,10 +299,11 @@ const PREFERS_REDUCE = window.matchMedia("(prefers-reduced-motion: reduce)").mat
 
   hero.addEventListener('pointermove', onPointer, { passive: true });
   hero.addEventListener('touchmove', onPointer, { passive: true });
-  window.addEventListener('scroll', onScroll, { passive: true });
+  // <<-- scroll listener removed: no spark generation on scroll
 
-  console.log('Sparkles initialized — canvas', canvas.width, 'x', canvas.height, 'DPR', DPR);
+  console.log('✨ Sparkles initialized (scroll-based spawns disabled) — canvas', canvas.width, 'x', canvas.height, 'DPR', DPR);
 })();
+
 
 // Horizontal auto-scroll with fade pause/resume + mouse controls
 // Robust horizontal auto-scroll for .screenshot-grid
