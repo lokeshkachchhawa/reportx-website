@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ReportX — AI Health Report Assistant</title>
+  <meta name="description" content="ReportX explains medical lab reports using advanced AI. Scan, understand and securely save your reports in multiple languages." />
+  <meta name="theme-color" content="#0d9488" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <script src="assets/js/script.js" defer></script>
+  <link rel="icon" href="assets/images/logo1.png" type="image/png" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- NAVBAR -->
+  <header class="site-header" role="banner">
+    <nav class="navbar container" role="navigation" aria-label="Main navigation">
+      <a class="logo" href="index.html" aria-label="ReportX Home">ReportX</a>
+
+      <button id="nav-toggle" class="nav-toggle" aria-controls="primary-menu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="hamburger" aria-hidden="true"></span>
+      </button>
+
+      <ul id="primary-menu" class="nav-list" role="menubar">
+        <li role="none"><a role="menuitem" href="#hero">Home</a></li>
+        <li role="none"><a role="menuitem" href="#features">Features</a></li>
+        <li role="none"><a role="menuitem" href="#how">How it Works</a></li>
+        <li role="none"><a role="menuitem" href="#screenshots">Screenshots</a></li>
+        <li role="none"><a role="menuitem" href="#download" class="btn">Download</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <!-- HERO -->
+    <section id="hero" class="hero" aria-label="Hero">
+      <!-- starfield (behind) -->
+      <canvas id="starfield" role="img" aria-label="Animated starfield background"></canvas>
+      <!-- sparkles (above stars, below content) -->
+      <canvas id="sparkles" aria-hidden="true"></canvas>
+
+      <div class="hero-content container">
+        <div class="hero-text">
+          <h1><span class="highlight">AI-powered</span> Health Insights</h1>
+          <p class="lead">ReportX helps you understand lab reports with advanced AI — in your language, quickly and securely.</p>
+          <p class="hero-ctas">
+            <a href="#download" class="btn btn-primary glow" role="button" aria-label="Download ReportX">Download App</a>
+            <a href="about.html" class="btn btn-ghost" role="button">Learn More</a>
+          </p>
+        </div>
+
+        <div class="hero-img floating" aria-hidden="true">
+          <img src="assets/images/screenshot1.jpeg" alt="ReportX mobile app preview" loading="lazy" width="320" height="640" />
+        </div>
+      </div>
+
+      <noscript>
+        <style>
+          #hero { background: linear-gradient(180deg,#001 0%, #000 100%); }
+        </style>
+      </noscript>
+    </section>
+
+    <!-- FEATURES -->
+    <section id="features" class="features" aria-labelledby="features-heading">
+      <div class="container">
+        <h2 id="features-heading">Why Choose ReportX?</h2>
+        <div class="feature-grid">
+          <article class="feature-card" aria-labelledby="f1">
+            <div class="icon" aria-hidden="true">📷</div>
+            <h3 id="f1">Easy Scan</h3>
+            <p>Snap or upload lab reports instantly — automatic detection & crop.</p>
+          </article>
+
+          <article class="feature-card" aria-labelledby="f2">
+            <div class="icon" aria-hidden="true">🧠</div>
+            <h3 id="f2">Advanced AI</h3>
+            <p>AI explains results in plain language with context & tips.</p>
+          </article>
+
+          <article class="feature-card" aria-labelledby="f3">
+            <div class="icon" aria-hidden="true">📂</div>
+            <h3 id="f3">Save Records</h3>
+            <p>All reports saved locally in-app — secure & easy to revisit.</p>
+          </article>
+
+          <article class="feature-card" aria-labelledby="f4">
+            <div class="icon" aria-hidden="true">🌐</div>
+            <h3 id="f4">Multi-Language</h3>
+            <p>Receive explanations in multiple languages for wider accessibility.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section id="how" class="how" aria-labelledby="how-heading">
+      <div class="container">
+        <h2 id="how-heading">How ReportX Works</h2>
+        <div class="steps" role="list">
+          <div class="step" role="listitem">
+            <span class="step-num">1</span>
+            <p>Upload or scan your lab report.</p>
+          </div>
+          <div class="step" role="listitem">
+            <span class="step-num">2</span>
+            <p>AI processes and explains results clearly.</p>
+          </div>
+          <div class="step" role="listitem">
+            <span class="step-num">3</span>
+            <p>Save and revisit your reports anytime.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="screenshots" class="screenshots" aria-labelledby="screens-heading">
+        <div class="container">
+          <h2 id="screens-heading">App Preview</h2>
+      
+          <div class="screenshot-wrap">
+            <!-- Prev / Next buttons -->
+            <button class="screenshot-btn screenshot-prev" aria-label="Scroll previous" type="button">‹</button>
+            <div class="screenshot-grid" tabindex="0" role="list">
+              <img src="assets/images/screenshot1.jpeg" alt="ReportX screenshot - scan" loading="lazy" width="200" role="listitem" />
+              <img src="assets/images/screenshot2.jpeg" alt="ReportX screenshot - results" loading="lazy" width="200" role="listitem" />
+              <img src="assets/images/screenshot3.jpeg" alt="ReportX screenshot - history" loading="lazy" width="200" role="listitem" />
+              <img src="assets/images/screenshot4.jpeg" alt="ReportX screenshot - history" loading="lazy" width="200" role="listitem" />
+              <img src="assets/images/screenshot5.jpeg" alt="ReportX screenshot - history" loading="lazy" width="200" role="listitem" />
+              <img src="assets/images/screenshot6.jpeg" alt="ReportX screenshot - history" loading="lazy" width="200" role="listitem" />
+              <!-- add more images as needed -->
+            </div>
+            <button class="screenshot-btn screenshot-next" aria-label="Scroll next" type="button">›</button>
+          </div>
+        </div>
+      </section>
+      
+    <!-- CTA -->
+    <section id="download" class="cta" aria-label="Download">
+      <div class="container">
+        <h2>Experience the Future of Health Reports</h2>
+        <a href="#" class="btn btn-primary glow" role="button">Download ReportX Now</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+        <ul class="footer-links" role="navigation" aria-label="Footer links">
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="refund.html">Refund Policy</a></li>
+            <li><a href="terms.html">Terms & Conditions</a></li>
+            <li><a href="data-safety.html">Data Safety</a></li>
+            <li><a href="about.html">Contact</a></li>
+          </ul>
+          
+      <p class="muted">&copy; 2025 ReportX. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- tiny inline mobile nav fallback (keeps markup simple) -->
+  <script>
+    (function () {
+      const btn = document.getElementById('nav-toggle');
+      const menu = document.getElementById('primary-menu');
+      if (!btn || !menu) return;
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        menu.classList.toggle('open');
+      });
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# Node modules (if used for testing)
+node_modules/
+
+# Build / temp
+dist/
+.cache/
