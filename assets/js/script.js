@@ -432,13 +432,7 @@ document.addEventListener('DOMContentLoaded', () => {
     grid.addEventListener('touchstart', () => { paused = true; targetSpeed = 0; }, { passive: true });
     grid.addEventListener('touchend', () => { paused = false; if (!holding) targetSpeed = BASE_SPEED; }, { passive: true });
 
-    grid.addEventListener('wheel', e => {
-      if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
-        offset -= Math.sign(e.deltaY) * 60;
-        clampOffset();
-        track.style.transform = `translate3d(${offset}px,0,0)`;
-      }
-    }, { passive: true });
+    
 
     // Prev / Next buttons (click + hold)
     // Prev/Next buttons (click-only, no hold)
