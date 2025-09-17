@@ -281,122 +281,126 @@
    Features / Cards (neon teal stroke + centered heading)
    ------------------------- */
 
-.features {
+   .features {
     position: relative;
     overflow: visible;
-    background: linear-gradient(180deg, rgba(15, 49, 30, 0.03), rgba(19, 93, 68, 0.03));
-    padding: 4rem var(--gutter);
+    /* Softer, cooler gradient with a hint of translucency */
+    background: linear-gradient(180deg, rgba(15, 49, 30, 0.05), rgba(19, 93, 68, 0.02));
+    padding: 2rem var(--gutter);
     color: var(--muted);
-    text-align: center; /* center heading and keep layout symmetrical */
-  }
-  
-  /* Large soft teal "shadow" / nebula behind the feature grid (keep if present) */
-  .features::before {
+    text-align: center;
+}
+
+/* Enhanced nebula with liquid-like glow */
+.features::before {
     content: "";
     position: absolute;
-    inset: -18% -5% -10% -5%;
+    inset: -20% -10% -15% -10%;
     z-index: 0;
     pointer-events: none;
+    /* Multi-layered gradient for depth and iridescence */
     background:
-      radial-gradient(800px 420px at 12% 24%, rgba(20,184,166,0.14), transparent 18%),
-      radial-gradient(740px 360px at 86% 68%, rgba(14,116,110,0.10), transparent 14%);
-    filter: blur(62px) saturate(120%);
+        radial-gradient(900px 450px at 10% 20%, rgba(20, 184, 166, 0.18), transparent 20%),
+        radial-gradient(800px 400px at 90% 70%, rgba(14, 116, 110, 0.14), transparent 18%),
+        radial-gradient(600px 300px at 50% 50%, rgba(80, 120, 255, 0.08), transparent 15%);
+    filter: blur(70px) saturate(140%);
     transform: translateZ(0);
-    opacity: 0.95;
-  }
-  
-  /* Ensure heading is centered */
-  .features > .container,
-  .features h2 {
+    opacity: 0.9;
+}
+
+/* Ensure centered layout */
+.features > .container,
+.features h2 {
     position: relative;
     z-index: 1;
     text-align: center;
-  }
-  
-  /* Heading */
-  .features h2 {
-    color: #fff;
-    font-size: 2rem;
-    margin: 0 0 1.5rem;
-    font-weight: 700;
-  }
-  
-  /* Grid */
-  .feature-grid {
+}
+
+/* Heading with cleaner typography */
+.features h2 {
+    color: #ffffff;
+    font-size: 2.2rem;
+    margin: 0 0 2rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Grid layout unchanged */
+.feature-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 1.5rem;
     position: relative;
     z-index: 1;
-  }
-  
-  /* Card base with neon stroke using dual-background trick */
-  .feature-card {
+}
+
+/* Liquid glass card */
+.feature-card {
     position: relative;
-    padding: 1.5rem;
-    border-radius: var(--radius-lg);
-    /* first background = card fill (padding-box),
-       second background = gradient border (border-box) */
-    background-image:
-      linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)), /* fill */
-      linear-gradient(90deg, rgba(20,184,166,0.95), rgba(13,148,136,0.95));   /* stroke */
-    background-origin: padding-box, border-box;
-    background-clip: padding-box, border-box;
-    border: 1px solid transparent; /* shows second background as border */
+    padding: 1.75rem;
+    border-radius: var(--radius-lg, 1.2rem);
+    /* Frosted glass effect */
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+    backdrop-filter: blur(12px) saturate(180%);
+    -webkit-backdrop-filter: blur(12px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    /* Subtle inner highlight for glass effect */
     box-shadow:
-      var(--shadow-card),
-      /* faint teal rim shadow */
-      0 8px 24px rgba(20,184,166,0.035);
-    transition: transform 260ms cubic-bezier(.2,.9,.3,1), box-shadow 260ms ease, background 260ms ease;
+        inset 0 1px 1px rgba(255, 255, 255, 0.2),
+        0 8px 32px rgba(20, 184, 166, 0.08),
+        0 4px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 300ms cubic-bezier(0.23, 1, 0.32, 1), box-shadow 300ms ease, background 300ms ease;
     overflow: hidden;
     z-index: 1;
-  }
-  
-  /* Decorative sheen (subtle) */
-  .feature-card::after {
+}
+
+/* Liquid-like sheen */
+.feature-card::after {
     content: "";
     position: absolute;
-    right: -30%;
-    top: -40%;
-    width: 120%;
-    height: 120%;
-    background: radial-gradient(400px 160px at 80% 20%, rgba(20,184,166,0.06), transparent 20%);
-    filter: blur(30px);
-    opacity: 0.9;
+    right: -40%;
+    top: -50%;
+    width: 140%;
+    height: 140%;
+    /* Glossy, iridescent highlight */
+    background: radial-gradient(500px 200px at 75% 25%, rgba(20, 184, 166, 0.12), rgba(80, 120, 255, 0.08), transparent 25%);
+    filter: blur(40px);
+    opacity: 0.85;
     pointer-events: none;
-    transition: opacity 260ms ease, transform 260ms ease;
-  }
-  
-  /* Hover: stronger neon stroke + glow */
-  .feature-card:hover {
-    transform: translateY(-8px);
-    /* slightly darker interior so stroke reads stronger */
-    background-image:
-      linear-gradient(180deg, rgba(12,24,28,0.15), rgba(6,12,14,0.08)),
-      linear-gradient(90deg, rgba(20,224,186,0.98), rgba(6,140,120,0.95));
+    transition: opacity 300ms ease, transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* Hover: enhanced glow and fluid movement */
+.feature-card:hover {
+    transform: translateY(-6px) scale(1.02);
+    /* Slightly darker glass with vibrant border */
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06));
     box-shadow:
-      0 16px 40px rgba(2,6,8,0.55),
-      0 18px 60px rgba(20,224,186,0.14); /* neon glow */
-    border: 1px solid rgba(20,224,186,0.06);
-  }
-  .feature-card:hover::after {
+        inset 0 1px 1px rgba(255, 255, 255, 0.25),
+        0 12px 48px rgba(20, 184, 166, 0.15),
+        0 8px 24px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(20, 224, 186, 0.2);
+}
+.feature-card:hover::after {
     opacity: 1;
-    transform: translateY(-6px) rotate(-4deg);
-  }
-  
-  /* Icon color */
-  .feature-card .icon {
+    transform: translateY(-8px) rotate(-2deg) scale(1.05);
+}
+
+/* Icon with vibrant color */
+.feature-card .icon {
     font-size: 2rem;
     margin-bottom: 0.8rem;
-    color: var(--teal);
-  }
+    color: var(--teal, #14b8a6);
+    filter: drop-shadow(0 2px 4px rgba(20, 184, 166, 0.2));
+}
   
   /* -------------------------
      How it works / steps (heading centered, subtle teal accents)
      ------------------------- */
   
   .how {
-    padding: 4rem var(--gutter);
+    padding: 1rem var(--gutter);
     color: var(--muted);
     position: relative;
     z-index: 1;
@@ -481,7 +485,7 @@
    ------------------------- */
 
 .screenshots {
-    padding: 4rem var(--gutter);
+    padding: 2rem var(--gutter);
     color: var(--muted);
     text-align: center;
     overflow: visible;
@@ -575,7 +579,7 @@
   
   /* CTA */
   .cta {
-    padding: 4rem var(--gutter);
+    padding: 2rem var(--gutter);
     text-align: center;
     background: linear-gradient(180deg, rgba(13,148,136,0.08), rgba(8,80,76,0.04));
     color: #fff;
