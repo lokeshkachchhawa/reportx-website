@@ -441,19 +441,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { passive: true });
 
     // Prev / Next buttons (click + hold)
-    if (prevBtn) {
-      prevBtn.addEventListener('click', () => stepBy(-1));
-      prevBtn.addEventListener('mousedown', () => { holding = -1; targetSpeed = -HOLD_SPEED; }, { passive: true });
-      prevBtn.addEventListener('touchstart', e => { holding = -1; targetSpeed = -HOLD_SPEED; e.preventDefault(); }, { passive: false });
-    }
-    if (nextBtn) {
-      nextBtn.addEventListener('click', () => stepBy(1));
-      nextBtn.addEventListener('mousedown', () => { holding = 1; targetSpeed = HOLD_SPEED; }, { passive: true });
-      nextBtn.addEventListener('touchstart', e => { holding = 1; targetSpeed = HOLD_SPEED; e.preventDefault(); }, { passive: false });
-    }
-    window.addEventListener('mouseup', () => {
-      if (holding !== 0) { holding = 0; targetSpeed = paused ? 0 : BASE_SPEED; }
-    });
+    // Prev/Next buttons (click-only, no hold)
+if (prevBtn) {
+  prevBtn.addEventListener('click', () => stepBy(-1));
+}
+if (nextBtn) {
+  nextBtn.addEventListener('click', () => stepBy(1));
+}
 
     // main RAF loop
     let last = null;
