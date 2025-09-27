@@ -1,248 +1,318 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Privacy Policy — ReportX</title>
-  <meta name="description" content="Privacy Policy for ReportX — how we collect, use, store, and protect your data." />
-  <link rel="stylesheet" href="assets/css/style.css" />
-  <script src="assets/js/script.js" defer></script>
+  <meta name="description" content="Privacy Policy for ReportX: how we collect, use, store, and protect your data." />
+  <style>
+    :root{
+      --bg:#071019;
+      --card:#ffffff;
+      --muted:#a9bcc0;
+      --text:#e6f7f6;
+      --accent:#0fdbca;
+      --card-shadow: 0 10px 30px rgba(2,8,23,0.45);
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    html,body{height:100%;}
+    body{
+      margin:0;
+      background:linear-gradient(180deg,#071019 0%, #03121a 100%);
+      color:var(--text);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.5;
+    }
+
+    .container{max-width:1100px;margin:0 auto;padding:2rem;}
+    .site-header{padding:1rem 0;color:#fff}
+    .navbar{display:flex;align-items:center;gap:1rem;justify-content:space-between}
+    .logo{font-weight:700;color:#fff;text-decoration:none;font-size:1.125rem}
+    .nav-list{list-style:none;margin:0;padding:0;display:flex;gap:0.75rem;align-items:center}
+    .nav-list a{color:rgba(255,255,255,0.9);text-decoration:none;padding:8px 10px;border-radius:8px}
+    .nav-list a.btn{background:var(--accent);color:#000;padding:8px 12px;font-weight:600}
+
+    .hero{padding:2rem 0 1rem}
+    .hero h1{margin:0;font-size:2rem;color:#fff}
+    .lead{color:var(--muted);margin-top:0.5rem}
+
+    main[role="main"]{padding-bottom:3rem}
+
+    .doc-section{margin:1.25rem 0;padding:1.25rem 0}
+    .narrow{max-width:900px}
+
+    /* table styles */
+    .table-responsive{width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}
+    .table-card{
+      background:var(--card);
+      border-radius:10px;
+      box-shadow:var(--card-shadow);
+      padding:12px;
+      margin:0.75rem 0 1.25rem;
+    }
+    .data-table{
+      width:100%;
+      border-collapse:collapse;
+      table-layout:auto;
+      color:#05202a;
+      font-size:15px;
+    }
+    .data-table caption{caption-side:top;text-align:left;padding-bottom:6px;font-weight:600;color:#05202a}
+    .data-table thead th{
+      text-align:left;padding:14px 16px;background:#f6fbfb;color:var(--accent);font-weight:700;border-bottom:1px solid #e6eef0;
+    }
+    .data-table tbody td{
+      padding:12px 16px;vertical-align:top;border-bottom:1px solid #f2f6f6;color:#05202a;line-height:1.45;
+    }
+    .data-table tbody tr:hover{background:#fbfeff}
+    @media (max-width:720px){
+      .data-table thead th, .data-table tbody td{padding:10px 12px;font-size:14px}
+    }
+
+    /* Headings */
+    h1,h2,h3,h4,h5,h6 {
+      color:#e6f7f6;
+      margin-top:0.75rem;
+      margin-bottom:0.5rem;
+      font-weight:600;
+    }
+    h1{font-size:2rem;}
+    h2{font-size:1.6rem;}
+    h3{font-size:1.25rem;color:#dffcf8;}
+
+    p{color:var(--muted);margin:0.5rem 0}
+    ul{color:var(--muted);margin:0.5rem 0 0.5rem 1.2rem}
+    a{color:var(--accent)}
+    footer{padding:2rem 0;color:var(--muted)}
+    .muted{color:var(--muted)}
+    .small{font-size:0.95rem;color:var(--muted)}
+  </style>
 </head>
 <body>
-  <a class="skip-link" href="#content">Skip to content</a>
-
-  <!-- Header (same as main site) -->
   <header class="site-header" role="banner">
-    <nav class="navbar container" role="navigation" aria-label="Main navigation">
+    <div class="container navbar" role="navigation" aria-label="Main navigation">
       <a class="logo" href="index.html" aria-label="ReportX Home">ReportX</a>
-      <button id="nav-toggle" class="nav-toggle" aria-controls="primary-menu" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="hamburger" aria-hidden="true"></span>
-      </button>
-      <ul id="primary-menu" class="nav-list" role="menubar">
-        <li role="none"><a role="menuitem" href="index.html#hero">Home</a></li>
-        <li role="none"><a role="menuitem" href="index.html#features">Features</a></li>
-        <li role="none"><a role="menuitem" href="index.html#how">How it Works</a></li>
-        <li role="none"><a role="menuitem" href="about.html">About</a></li>
-        <li role="none"><a role="menuitem" href="index.html#download" class="btn">Download</a></li>
-      </ul>
-    </nav>
+      <nav aria-label="Primary" style="margin-left:auto">
+        <ul class="nav-list" role="menubar">
+          <li role="none"><a role="menuitem" href="index.html#hero">Home</a></li>
+          <li role="none"><a role="menuitem" href="index.html#features">Features</a></li>
+          <li role="none"><a role="menuitem" href="about.html">About</a></li>
+          <li role="none"><a role="menuitem" href="index.html#download" class="btn">Download</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <main id="content" tabindex="-1" class="container" style="padding:3.5rem 1rem;">
-    <section class="hero about-hero" aria-labelledby="privacy-heading" style="min-height:auto; padding:1.5rem 0;">
-      <div class="hero-content" style="padding:0; gap:1rem;">
-        <div class="hero-text">
-          <h1 id="privacy-heading"><span class="highlight">Privacy</span> Policy</h1>
-          <p class="lead">Effective date: <strong id="effective-date">September 17, 2025</strong></p>
-          <p style="color:var(--muted); max-width:900px;">
-            This Privacy Policy describes how <strong>ReportX</strong> (“we”, “us”, “our”) collects, uses, discloses, and protects information when you use our mobile application and related services (the “App”).
-          </p>
+  <main id="content" role="main" tabindex="-1" class="container">
+    <section class="hero" aria-labelledby="privacy-heading">
+      <h1 id="privacy-heading">Privacy Policy</h1>
+      <p class="lead">Effective date: <strong>September 27, 2025</strong></p>
+      <p class="small">This Privacy Policy describes how ReportX (“we”, “us”, “our”) collects, uses, discloses, and protects information when you use our mobile application and related services (the “App”).</p>
+    </section>
+
+    <section class="doc-section">
+      <div class="narrow">
+        <h2>1. Overview and Medical Disclaimer</h2>
+        <p>ReportX helps users scan and understand clinical lab report pages using on-device and cloud-based AI.</p>
+        <p>ReportX is not a healthcare provider and does not provide medical diagnosis. The App provides informational AI explanations based on lab report text and values. Always consult a qualified healthcare professional for medical advice and before making medical decisions.</p>
+      </div>
+    </section>
+
+    <section class="doc-section">
+      <div class="narrow">
+        <h2>2. Data Collection and Storage</h2>
+
+        <h3>A. Information You Provide</h3>
+        <ul>
+          <li><strong>Images of Lab Reports:</strong> Required for the App’s analysis feature.</li>
+          <li><strong>Account Information:</strong> If you sign up or log in, we collect your <em>email address</em> (and password, managed securely by Firebase Authentication).</li>
+          <li><strong>Support Messages:</strong> If you contact support, we collect the content you provide and any attachments.</li>
+        </ul>
+
+        <h3>B. Storage and Local Processing</h3>
+        <p>Lab report data, scanned images, and analysis history are stored locally on your device and never uploaded to our servers. Deleting the app or clearing its data deletes this information.</p>
+
+        <h3>C. Automatically Collected Information</h3>
+        <ul>
+          <li><strong>Usage Data:</strong> Events like app version, feature usage, taps (via Firebase Analytics).</li>
+          <li><strong>Device & Performance Data:</strong> Device model, OS version, performance metrics, crash logs (via Crashlytics).</li>
+          <li><strong>Identifiers:</strong> Device IDs for linking crash reports and analytics.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="doc-section">
+      <div class="narrow">
+        <h2>3. Data Usage and Processing</h2>
+
+        <div class="table-responsive">
+          <div class="table-card">
+            <table class="data-table">
+              <caption>How we use information</caption>
+              <thead>
+                <tr>
+                  <th>Category of Data</th>
+                  <th>Purpose of Use</th>
+                  <th>Third Parties Involved</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Lab Reports (Images/Data)</td>
+                  <td>AI analysis, explanation, value extraction, local storage</td>
+                  <td>Google Gemini API</td>
+                </tr>
+                <tr>
+                  <td>Account Information (Email/Password)</td>
+                  <td>Authentication and account management</td>
+                  <td>Firebase Authentication</td>
+                </tr>
+                <tr>
+                  <td>Usage, Device & Crash Data</td>
+                  <td>Debugging, fixing errors, app improvement</td>
+                  <td>Firebase Analytics, Crashlytics</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </section>
 
-<!-- Overview -->
-<section class="doc-section" aria-labelledby="overview-heading">
-    <div class="container narrow">
-      <h2 id="overview-heading">Overview</h2>
-      <p>
-        ReportX is designed to help users scan and understand clinical lab report pages using on-device AI...
-      </p>
-    </div>
-  </section>
-  
-
-    <!-- What we collect -->
-    <section aria-labelledby="what-heading" style="padding:1.25rem 0;">
-      <div class="container">
-        <h2 id="what-heading">What information we collect</h2>
-
-        <h3>Information you provide</h3>
-        <ul style="color:var(--muted);">
-          <li><strong>Images of lab reports:</strong> When you scan or upload a lab report page, the image is required for the App to analyze results.</li>
-          <li><strong>Account information (optional):</strong> If you create an account or enable cloud backups, we may collect an email address and password or an authentication token.</li>
-          <li><strong>Support messages:</strong> If you contact support, we collect the content you provide and any attachments.</li>
+    <section class="doc-section">
+      <div class="narrow">
+        <h2>4. Third-Party Services and Sharing</h2>
+        <ul>
+          <li><strong>Firebase Authentication:</strong> Manages accounts and securely stores email/password credentials.</li>
+          <li><strong>Google Gemini API:</strong> Processes lab report images/text for AI analysis.</li>
+          <li><strong>Firebase Analytics & Crashlytics:</strong> Collects anonymous usage, performance, and crash data.</li>
         </ul>
-
-        <h3>Automatically collected information</h3>
-        <ul style="color:var(--muted);">
-          <li><strong>Usage data:</strong> Non-identifying analytics (app version, crash reports, feature usage) to improve the App.</li>
-          <li><strong>Device & performance data:</strong> Device model, operating system version, and performance metrics for debugging and optimization.</li>
-        </ul>
-
-        <h3>Sensitive information (health data)</h3>
-        <p style="color:var(--muted);">
-          Images of lab reports may contain sensitive health information. <strong>By default ReportX processes images on your device and stores reports locally in the app.</strong> We do not access, read, or store your lab data on our servers unless you explicitly enable cloud backup or sharing features. If you enable cloud features, that is explained in the section below and you must consent before any upload occurs.
-        </p>
+        <p>We may disclose information if required by law.</p>
       </div>
     </section>
 
-    <!-- How we use data -->
-    <section aria-labelledby="use-heading" style="padding:1.25rem 0;">
-      <div class="container">
-        <h2 id="use-heading">How we use information</h2>
-        <ul style="color:var(--muted);">
-          <li><strong>Provide features:</strong> Analyze uploaded images to extract lab values, explain results, and display them in the App.</li>
-          <li><strong>Local storage:</strong> Save and organize your scanned reports locally on your device (unless you enable cloud backup).</li>
-          <li><strong>Improve the App:</strong> Aggregate, anonymized usage data and crash reports help us fix bugs and improve performance.</li>
-          <li><strong>Support:</strong> Use support messages to assist you and investigate issues.</li>
+    <section class="doc-section">
+      <div class="narrow">
+        <h2>5. Security</h2>
+        <p>Lab report data is stored only on your device. Data sent to Firebase and Gemini is encrypted in transit (HTTPS/TLS).</p>
+      </div>
+    </section>
+
+    <section class="doc-section">
+      <div class="narrow">
+        <h2>6. Data Retention</h2>
+        <p>Locally stored data remains until deleted by you. Firebase Authentication retains your account until you request deletion. Analytics/crash logs are kept as per Firebase retention policies.</p>
+      </div>
+    </section>
+
+    <section class="doc-section">
+      <div class="narrow">
+        <h2>7. Your Rights</h2>
+        <ul>
+          <li><strong>Access &amp; Correction:</strong> You can view and update your account details (such as email) from your profile page in the App.</li>
+          <li><strong>Account Deletion:</strong> You may delete your account directly from the <em>User Profile</em> page in the App. This will permanently remove your authentication details (email and login) from Firebase Authentication. Locally stored lab reports will remain on your device unless you uninstall the App or clear its data.</li>
+          <li><strong>Data Deletion:</strong> To delete lab reports and analysis history, you can manually delete them within the App or uninstall the App.</li>
+          <li><strong>Opting out of analytics:</strong> You may opt out of non-essential analytics at the OS level.</li>
+          <p><strong>Account Data:</strong> Your email/login is retained as long as you have an account. If you delete your account via the profile page, your authentication data is permanently deleted from Firebase Authentication.</p>
+
         </ul>
       </div>
     </section>
+    
 
-    <!-- Cloud backup & sharing -->
-    <section aria-labelledby="cloud-heading" style="padding:1.25rem 0;">
-      <div class="container">
-        <h2 id="cloud-heading">Cloud backup, sharing, and optional features</h2>
-        <p style="color:var(--muted);">
-          ReportX is designed so that all scanning and analysis can happen locally. Cloud backup or sharing of reports is <strong>optional</strong> and will only occur if you explicitly enable and consent to those features. If you enable cloud backup, we will:
-        </p>
-        <ul style="color:var(--muted);">
-          <li>Upload encrypted copies of your reports to [[Insert Cloud Provider — e.g., AWS S3 / Firebase / other]];</li>
-          <li>Store metadata (timestamps, file identifiers) to allow syncing across your devices;</li>
-          <li>Use authentication (OAuth / email) to associate cloud backups with your account.</li>
-        </ul>
-
-        <p style="color:var(--muted);">
-          Before any upload, you will be shown a clear consent screen describing what will be uploaded. If you enable cloud backup, you can disable it at any time and request deletion of cloud copies (see <a href="#rights-heading">Your rights</a>).
-        </p>
+    <section class="doc-section">
+      <div class="narrow">
+        <h2>8. Children</h2>
+        <p>Not intended for children under 13. We do not knowingly collect data from children.</p>
       </div>
     </section>
 
-    <!-- Third parties -->
-    <section aria-labelledby="third-heading" style="padding:1.25rem 0;">
-      <div class="container">
-        <h2 id="third-heading">Third-party services</h2>
-        <p style="color:var(--muted);">
-          We use third-party service providers for infrastructure, analytics, crash reporting, and payment processing (if applicable). Examples include hosting, crash/analytics, and identity providers. These services may process data on our behalf; we require them to protect your data.
-        </p>
-
-        <p style="color:var(--muted);">
-          <strong>Current providers:</strong> [[List the specific providers you use: e.g., Google Firebase (Analytics/Crashlytics), Sentry, Stripe, AWS, etc.]] — please update this list to be accurate for your app.
-        </p>
+    <section class="doc-section">
+      <div class="narrow">
+        <h2>9. Contact</h2>
+        <p>Email us at: <a href="mailto:drktvtech@gmail.com">drktvtech@gmail.com</a></p>
       </div>
     </section>
 
-    <!-- Data sharing -->
-    <section aria-labelledby="sharing-heading" style="padding:1.25rem 0;">
-      <div class="container">
-        <h2 id="sharing-heading">Data sharing & disclosures</h2>
-        <ul style="color:var(--muted);">
-          <li>We do not sell your personal information.</li>
-          <li>We may share information with service providers under contract to perform services for us (hosting, analytics, payment processing).</li>
-          <li>We may disclose information when required by law, or to respond to lawful requests (court orders, government investigations).</li>
-        </ul>
+    <section class="doc-section">
+      <div class="narrow">
+        <h2>10. Changes</h2>
+        <p>We may update this Privacy Policy and will post changes with a new effective date.</p>
       </div>
     </section>
 
-    <!-- Security -->
-    <section aria-labelledby="security-heading" style="padding:1.25rem 0;">
-      <div class="container">
-        <h2 id="security-heading">Security</h2>
-        <p style="color:var(--muted);">
-          We use industry-standard technical and administrative measures to protect data (encryption in transit using HTTPS / TLS, encrypted storage where applicable). However, no system is completely secure — if you suspect a breach, contact us immediately at <a href="mailto:drktvtech@gmail.com">drktvtech@gmail.com</a>.
-        </p>
-      </div>
-    </section>
-
-    <!-- Retention -->
-    <section aria-labelledby="retention-heading" style="padding:1.25rem 0;">
-      <div class="container">
-        <h2 id="retention-heading">Data retention</h2>
-        <p style="color:var(--muted);">
-          By default, scanned reports and analysis are kept on your device until you delete them. For cloud backups (if enabled), we retain your backups until you delete your account or request deletion. We also retain aggregated analytics for product improvement.
-        </p>
-      </div>
-    </section>
-
-    <!-- Your rights -->
-    <section aria-labelledby="rights-heading" style="padding:1.25rem 0;">
-      <div class="container">
-        <h2 id="rights-heading">Your rights & choices</h2>
-        <ul style="color:var(--muted);">
-          <li><strong>Access & correction:</strong> You can access and correct your account information by logging into the App.</li>
-          <li><strong>Deletion:</strong> To delete your account and any cloud backups, email <a href="mailto:drktvtech@gmail.com">drktvtech@gmail.com</a> with the subject “Data deletion” and we will respond.</li>
-          <li><strong>Opting out of analytics:</strong> You may opt out of non-essential analytics in the App settings (if provided) or at the OS level.</li>
-          <li><strong>Data portability & other rights:</strong> Depending on your jurisdiction (e.g., GDPR, CCPA), you may have the right to request a copy of your personal data or to restrict processing — contact us to learn more.</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Children -->
-    <section aria-labelledby="children-heading" style="padding:1.25rem 0;">
-      <div class="container">
-        <h2 id="children-heading">Children</h2>
-        <p style="color:var(--muted);">
-          The App is not intended for children under 13 (or the minimum age in your jurisdiction). We do not knowingly collect personal information from children. If you believe a child under the applicable age has provided us with personal data, contact us and we will delete it.
-        </p>
-      </div>
-    </section>
-
-    <!-- International -->
-    <section aria-labelledby="international-heading" style="padding:1.25rem 0;">
-      <div class="container">
-        <h2 id="international-heading">International transfers</h2>
-        <p style="color:var(--muted);">
-          If you are located outside the country where our servers are hosted, data transfers may occur to that country. We take reasonable steps to protect data consistent with applicable laws.
-        </p>
-      </div>
-    </section>
-
-    <!-- Legal / Compliance notes -->
-    <section aria-labelledby="legal-heading" style="padding:1.25rem 0;">
-      <div class="container">
-        <h2 id="legal-heading">Legal & regulatory notes</h2>
-        <p style="color:var(--muted);">
-          ReportX is not a healthcare provider and does not provide medical diagnosis. The App provides informational AI explanations based on lab report text and values. Always consult a qualified healthcare professional for medical advice.
-        </p>
-        <p style="color:var(--muted);">
-          If your organization is subject to HIPAA or other healthcare regulations and you intend to use ReportX for covered purposes, contact us to discuss technical and contractual arrangements.
-        </p>
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section aria-labelledby="contact-heading" style="padding:1.25rem 0;">
-      <div class="container">
-        <h2 id="contact-heading">Contact</h2>
-        <p style="color:var(--muted);">If you have questions about this policy or privacy requests, email us: <a href="mailto:drktvtech@gmail.com">drktvtech@gmail.com</a></p>
-
-        <p style="color:var(--muted);">Data Protection Officer (if applicable): [[Name / contact details]]</p>
-      </div>
-    </section>
-
-    <!-- Changes -->
-    <section aria-labelledby="changes-heading" style="padding:1.25rem 0;">
-      <div class="container">
-        <h2 id="changes-heading">Changes to this policy</h2>
-        <p style="color:var(--muted);">
-          We may update this Privacy Policy from time to time. We will post the updated policy with a new effective date. Material changes will be highlighted in-app or via email where required.
-        </p>
-      </div>
-    </section>
-
-    <!-- Acknowledgement -->
-    <section style="padding:1.25rem 0 3rem;">
-      <div class="container">
-        <p style="color:var(--muted); font-size:0.95rem;">
-          By using ReportX, you acknowledge that you have read and understood this Privacy Policy and consent to the collection and use of information as described.
-        </p>
+    <section class="doc-section">
+      <div class="narrow">
+        <h2>Google Play Data Safety — Disclosure Summary</h2>
+        <div class="table-responsive">
+          <div class="table-card">
+            <table class="data-table">
+              <caption>Data Safety Summary</caption>
+              <thead>
+                <tr>
+                  <th>Data Type</th>
+                  <th>Is Collected?</th>
+                  <th>Shared With</th>
+                  <th>Purpose</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Health Data (Lab Reports)</td>
+                  <td>YES</td>
+                  <td>Gemini API</td>
+                  <td>App functionality (AI analysis)</td>
+                </tr>
+                <tr>
+                  <td>Photos/Videos (Lab Report Images)</td>
+                  <td>YES</td>
+                  <td>Gemini API</td>
+                  <td>App functionality (AI analysis)</td>
+                </tr>
+                <tr>
+                  <td>Email Address</td>
+                  <td>YES</td>
+                  <td>Firebase Authentication</td>
+                  <td>Account login, signup, management (Users can delete account from profile page)</td>
+                </tr>
+                <tr>
+                  <td>Device IDs</td>
+                  <td>YES</td>
+                  <td>Firebase</td>
+                  <td>Analytics, crash logs</td>
+                </tr>
+                <tr>
+                  <td>Crash Logs</td>
+                  <td>YES</td>
+                  <td>Firebase</td>
+                  <td>App stability</td>
+                </tr>
+                <tr>
+                  <td>App interactions</td>
+                  <td>YES</td>
+                  <td>Firebase</td>
+                  <td>Analytics</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
       </div>
     </section>
   </main>
 
-  <!-- Footer -->
-  <footer class="site-footer" role="contentinfo">
-    <div class="container">
-        <ul class="footer-links" role="navigation" aria-label="Footer links">
-            <li><a href="privacy.html">Privacy Policy</a></li>
-            <li><a href="refund.html">Refund Policy</a></li>
-            <li><a href="terms.html">Terms & Conditions</a></li>
-            <li><a href="data-safety.html">Data Safety</a></li>
-            <li><a href="about.html">Contact</a></li>
-          </ul>
-          
-      <p class="muted" style="color:var(--muted);">&copy; 2025 ReportX. All rights reserved.</p>
+  <footer role="contentinfo" class="container">
+    <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;">
+      <nav aria-label="Footer">
+        <ul style="list-style:none;margin:0;padding:0;display:flex;gap:1rem;">
+          <li><a href="privacy.html" style="color:var(--muted)">Privacy Policy</a></li>
+          <li><a href="terms.html" style="color:var(--muted)">Terms &amp; Conditions</a></li>
+          <li><a href="data-safety.html" style="color:var(--muted)">Data Safety</a></li>
+          <li><a href="about.html" style="color:var(--muted)">Contact</a></li>
+        </ul>
+      </nav>
+      <p class="muted" style="margin:0">&copy; 2025 ReportX. All rights reserved.</p>
     </div>
   </footer>
 </body>
