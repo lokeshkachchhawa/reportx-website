@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Data Safety — ReportX</title>
-  <meta name="description" content="Data Safety information for ReportX app. Learn how your data is collected, stored, and protected." />
+  <meta name="description" content="Data Safety information for ReportX app. Learn how your data is collected, stored, shared, and protected." />
   <link rel="stylesheet" href="assets/css/style.css" />
   <script src="assets/js/script.js" defer></script>
 </head>
@@ -34,7 +34,7 @@
       <div class="hero-content" style="padding:0; gap:1rem;">
         <div class="hero-text">
           <h1 id="data-heading"><span class="highlight">Data</span> Safety</h1>
-          <p class="lead">Transparency on how ReportX collects, uses, and protects your data.</p>
+          <p class="lead">Transparency on how ReportX collects, processes, and protects your data.</p>
         </div>
       </div>
     </section>
@@ -44,8 +44,8 @@
       <div class="container narrow">
         <h2 id="overview-heading">Overview</h2>
         <p>
-          ReportX is designed with your privacy and safety in mind. We follow the <strong>Google Play Data Safety</strong> guidelines to 
-          ensure you understand what data is collected, how it is used, and how it is protected.
+          ReportX is designed with your privacy in mind. We follow the <strong>Google Play Data Safety</strong> guidelines to 
+          explain clearly what data is collected, how it is used, and what choices you have.
         </p>
       </div>
     </section>
@@ -54,10 +54,10 @@
       <div class="container narrow">
         <h2 id="data-collected-heading">Data We Collect</h2>
         <ul>
-          <li><strong>Lab Report Images</strong>: Captured using your device camera or uploaded from storage.</li>
-          <li><strong>App Usage Data</strong>: Basic analytics (e.g., crash logs, performance) to improve functionality.</li>
+          <li><strong>Email Address</strong>: Required for login and account creation via Firebase Authentication.</li>
+          <li><strong>Lab Report Images & Extracted Data</strong>: Captured via device camera or selected from gallery for AI analysis.</li>
+          <li><strong>App Usage & Device Data</strong>: Crash logs, performance metrics, and analytics events.</li>
         </ul>
-        <p>No sensitive personal identifiers (such as your name, email, or phone number) are required to use the app.</p>
       </div>
     </section>
 
@@ -65,9 +65,10 @@
       <div class="container narrow">
         <h2 id="data-use-heading">How Your Data is Used</h2>
         <ul>
-          <li>To provide AI-powered health insights from your lab reports.</li>
-          <li>To store your lab reports securely on your device for later access.</li>
-          <li>To improve app performance and reliability.</li>
+          <li>To authenticate and manage your account (using email address).</li>
+          <li>To provide AI-powered health insights from your lab reports (Gemini API processing).</li>
+          <li>To store and display lab reports locally on your device.</li>
+          <li>To improve app stability and fix crashes (Firebase Analytics/Crashlytics).</li>
         </ul>
       </div>
     </section>
@@ -76,13 +77,15 @@
       <div class="container narrow">
         <h2 id="sharing-heading">Data Sharing</h2>
         <p>
-          <strong>We do not sell or share your data</strong> with third parties for advertising or marketing purposes. 
-          Data is only shared when:
+          We only share limited data with trusted third parties as needed for app functionality:
         </p>
         <ul>
-          <li>Required by law or government authorities.</li>
-          <li>With your explicit consent (e.g., exporting reports).</li>
+          <li><strong>Google Gemini API</strong>: When you request an analysis, the lab report image/text is sent temporarily for processing.</li>
+          <li><strong>Firebase Analytics & Crashlytics</strong>: Collect usage, crash, and device data to improve the app.</li>
         </ul>
+        <p>
+          <strong>We do not sell your data</strong> to advertisers or share it for marketing purposes.
+        </p>
       </div>
     </section>
 
@@ -90,8 +93,7 @@
       <div class="container narrow">
         <h2 id="security-heading">Data Security</h2>
         <p>
-          All data is stored securely on your device. When cloud backup is enabled, reports are encrypted before storage. 
-          We implement strong technical safeguards to prevent unauthorized access.
+          Sensitive health data (lab reports) is stored only on your device unless you choose to export it. Data transferred to Gemini API is encrypted in transit (HTTPS/TLS).
         </p>
       </div>
     </section>
@@ -100,8 +102,9 @@
       <div class="container narrow">
         <h2 id="retention-heading">Data Retention</h2>
         <p>
-          Your lab reports remain stored locally in the app until you delete them. If you uninstall ReportX, all stored 
-          data is permanently removed from your device.
+          <strong>Locally stored data</strong>: Remains on your device until you delete it or uninstall the app.<br />
+          <strong>Account data</strong>: You may delete your account anytime in the profile section; this will erase your Firebase Auth account and associated metadata.<br />
+          <strong>Analytics/Crash data</strong>: Retained by Firebase for product improvement only.
         </p>
       </div>
     </section>
@@ -110,9 +113,10 @@
       <div class="container narrow">
         <h2 id="rights-heading">Your Rights</h2>
         <ul>
-          <li>You can delete lab reports at any time within the app.</li>
-          <li>You can uninstall the app to erase all locally stored data.</li>
-          <li>You can contact us for any privacy-related requests.</li>
+          <li>You can delete reports inside the app.</li>
+          <li>You can delete your account (and email) anytime from your profile page.</li>
+          <li>You can uninstall the app to erase all locally stored lab reports.</li>
+          <li>You can contact us for any privacy-related request.</li>
         </ul>
       </div>
     </section>
